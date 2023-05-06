@@ -1,0 +1,21 @@
+game:
+  players:
+    - color: "0,255,0"
+      name: "jo"
+      up_key: "up"
+      down_key: "down"
+      left_key: "left"
+      right_key: "right"
+    - color: "255,0,0"
+      name: "roli"
+      up_key: "w"
+      down_key: "s"
+      left_key: "a"
+      right_key: "d"
+    - color: "255,255,0"
+      name: "max"
+      up_key: "1"
+      down_key: "2"
+      left_key: "3"
+      right_key: "4"
+
