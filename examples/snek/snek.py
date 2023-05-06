@@ -8,7 +8,7 @@ import keyboard
 import yaml
 from yaml import SafeLoader
 
-from ledmatrix import Image, LEDMatrix
+from ledmatrix.ledmatrix import Image, LEDMatrix
 
 ip_address = "192.168.2.160"  # replace with the receiver's IP address
 port = 21324  # replace with the receiver's port number

@@ -33,11 +33,20 @@ def image_to_packet(image: List[List[Tuple[int, int, int]]]):
     return packet_string
 
 
+def png_to_image(png_image, image):
+    png_image = png_image.resize((image.width, image.height))
+
+    for y in range(png_image.height):
+        for x in range(png_image.width):
+            pixel = png_image.getpixel((x, y))
+            image.set_pixel(y, image.width - x - 1, (pixel[0], pixel[1], pixel[2]))
+
+
 class Image:
-    def __init__(self, width, height) -> None:
+    def __init__(self, width, height, color=(0, 0, 0)) -> None:
         self.width = width
         self.height = height
-        self.pixels = [[(0, 0, 0) for j in range(0, width)] for i in range(0, height)]
+        self.pixels = [[color for j in range(0, width)] for i in range(0, height)]
 
     def set_pixel(self, x, y, color):
         """TODO: Docstring for set_pixel.
