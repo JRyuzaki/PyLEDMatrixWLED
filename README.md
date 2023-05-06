@@ -2,4 +2,4 @@
 
 ## Installation
 
-`pip3 install <repository>`
+`pip3 install pyledmatrixwled`
